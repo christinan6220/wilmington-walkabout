@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:context=".DetailActivity">
+
+            <TextView
+                android:id="@+id/site_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/historicSiteName"
+                android:textAlignment="center"
+                android:paddingBottom="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/site_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/site_header"
+                android:adjustViewBounds="true"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/aboutSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/site_img"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/site_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/aboutSite"
+                tools:ignore="MissingConstraints"
+                android:text="@string/detail_link"
+                android:autoLink="web"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+
+
